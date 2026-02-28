@@ -1,0 +1,206 @@
+/* =======================
+   RESET
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =======================
+   BODY
+======================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+    color: #333;
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    padding: 20px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =======================
+   LOGO
+======================= */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #ffeb3b;
+}
+
+/* =======================
+   MENU
+======================= */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    position: relative;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+
+/* Animation soulignement */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #ffeb3b;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* =======================
+   MAIN SECTION
+======================= */
+.main-content {
+    width: 85%;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* =======================
+   IMAGE
+======================= */
+.about-img {
+    width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.4s;
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+}
+
+/* =======================
+   TEXT
+======================= */
+.about-text {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* =======================
+   BUTTON STYLE (si tu ajoutes un bouton)
+======================= */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1b5e20;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Animation apparition */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Bouton moderne */
+.btn {
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: darkgreen;
+    transform: scale(1.05);
+}
